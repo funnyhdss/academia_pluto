@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Alunos Academia</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body class="bg-indigo-900 text-gray-100 flex justify-center items-center min-h-screen m-0">
+    <div class="bg-gray-800 rounded-lg shadow-lg p-8 flex">
+        <div class="mr-8 p-6 rounded-md bg-gray-700">
+            <h2 class="text-xl text-gray-300 text-center mb-4">Alunos</h2>
+            <div id="listaAlunos">  
+            </div>
+            <div class="mt-6 text-center">
+                <button id="btnCadastrarNovo" class="bg-yellow-500 hover:bg-yellow-700 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cadastrar Novo Aluno</button>
+            </div>
+        </div>
+        <div class="p-6 rounded-md bg-gray-700 flex flex-col gap-4">
+            <h2 class="text-xl text-gray-300 text-center mb-4">Detalhes do Aluno</h2>
+            <div>
+                <div class="flex flex-col">
+                    <label class="text-gray-400 mb-1">Nome:</label>
+                    <input type="text" id="detalheNome" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-gray-600" disabled>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-gray-400 mb-1">CPF:</label>
+                    <input type="text" id="detalheCPF" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-gray-600" disabled>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-gray-400 mb-1">Status:</label>
+                    <div id="detalheStatus" class="text-center font-bold py-2 rounded"></div>
+                </div>
+                <div class="flex gap-2 mt-4">
+                    <button id="btnEditarAluno" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Editar</button>
+                    <button id="btnExcluirAluno" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Excluir</button>
+                </div>
+            </div>
+
+            <div id="cadastroAluno" style="display: none;">
+                <h2 class="text-xl text-gray-300 text-center mb-4">Cadastrar Novo Aluno</h2>
+                <div class="flex flex-col">
+                    <label class="text-gray-400 mb-1">Nome:</label>
+                    <input type="text" id="cadastroNome" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-gray-600">
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-gray-400 mb-1">CPF:</label>
+                    <input type="text" id="cadastroCPF" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-gray-600">
+                </div>
+                <div class="flex gap-2 mt-4">
+                    <button id="btnCadastrar" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cadastrar</button>
+                    <button id="btnCancelarCadastro" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancelar</button>
+                </div>
+            </div>
+
+            <div id="editarAluno" style="display: none;">
+                <h2 class="text-xl text-gray-300 text-center mb-4">Editar Aluno</h2>
+                <div class="flex flex-col">
+                    <label class="text-gray-400 mb-1">Nome:</label>
+                    <input type="text" id="editarNome" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-gray-600">
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-gray-400 mb-1">CPF:</label>
+                    <input type="text" id="editarCPF" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-gray-600">
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-gray-400 mb-1">Status:</label>
+                    <select id="editarStatus" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-gray-600">
+                        <option value="true">Liberado</option>
+                        <option value="false">Bloqueado</option>
+                    </select>
+                </div>
+                <div class="flex gap-2 mt-4">
+                    <button id="btnSalvarEdicao" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Salvar</button>
+                    <button id="btnCancelarEdicao" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
