@@ -1,4 +1,5 @@
 📋 Admin Alunos Academia
+
 Um painel web para gerenciar alunos de uma academia. A aplicação permite visualizar, cadastrar, editar e excluir alunos consumindo uma API REST hospedada.
 
 🚀 Funcionalidades
